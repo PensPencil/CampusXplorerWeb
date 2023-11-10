@@ -1,0 +1,78 @@
+/* Apply a CSS reset for consistent styling across browsers */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a global font style */
+body {
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+/* Improve overall layout and spacing */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Style the search box and navigation button */
+#search-box {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 1;
+}
+
+#places-search {
+    width: 300px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+#navigate-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#navigate-button:hover {
+    background-color: #0056b3;
+}
+
+/* Style the map container */
+#map {
+    position: absolute;
+    top: 50px; /* Adjust based on the height of the search box */
+    bottom: 0;
+    width: 100%;
+    height: calc(100% - 50px); /* Adjust based on the height of the search box */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Customize Mapbox popup styling */
+.mapboxgl-popup {
+    max-width: 400px;
+    font-size: 14px;
+}
+
+/* Add a subtle box-shadow to the map container for depth */
+#map {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.popup-content {
+    max-width: 150px; /* Adjust the max-width as needed */
+    text-align: center;
+  }
+  
+  .popup-content img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px; /* Adjust the max-height as needed */
+  }
